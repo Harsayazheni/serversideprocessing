@@ -21,6 +21,7 @@ The Website is published. Provide user inputs. The server processes the inputs i
 
 ## PROGRAM :
 PERIMETER.HTML
+```
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -106,10 +107,13 @@ body { background-color: #FFD4A2;}
         
     
 </html>
-views.py
-from django.shortcuts import render
+```
+
 
 # Create your views here.
+views.py
+```
+from django.shortcuts import render
 def perimeter(request):
     context = {}
     context['length']="0"
@@ -133,6 +137,7 @@ def perimeter(request):
         print('Perimeter=',perimeter)
 
     return render(request,"serverapp/perimeter.html",context)
+```
     ![212465273-51dcddbd-fcd5-4a5d-9c83-2835d5d325e9](https://user-images.githubusercontent.com/118708467/215157009-a89106a2-59b5-4148-99b2-49fadb7b2913.png)
 
 ## OUTPUT:
