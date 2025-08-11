@@ -19,94 +19,88 @@ Write HTML and CSS code in the file save it and run the app using python manage.
 STEP 5:-
 The Website is published. Provide user inputs. The server processes the inputs in the terminal and provides output in the client side. The server side processing can be views in the terminal.
 
-## PROGRAM :
-PERIMETER.HTML
+## PROGRAM
+perimeter.html
 ```
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>PERIMETER OF RECTANGLE</title>
-        <style>
+<head>
+    <title>PERIMETER OF RECTANGLE</title>
+    <style>
         form {
-  width: 500px;
-  margin: 0 auto;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-}
-
-label {
-  display: block;
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-input[type="text"],
-input[type="number"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-input[type="submit"] {
-  background-color: #FFA2A6;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-}
-
-input[type="submit"]:hover {
-  background-color: #FFA2CD;
-}
-
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-
-.perimeter {
-  margin-bottom: 20px;
-  color: purple;
-  font-size: 20px;
-  font-weight: bold;
-}
-h1 {
-  text-align: center;
-  font-size: 24px;
-  color: black);
-}
-body { background-color: #FFD4A2;}
-
-</style>
-    </head>
-            <body>
-                <h1> PERIMETER OF RECTANGLE </h1>
-                 <form method="POST" action="/perimeter/">
-                    {%csrf_token%}	
-		 <label for="length">Enter Length</label>
-         <input type="text" name="length" id="length" value="{{ length }}"/> <br>			
-          <label for="width">Enter Width</label>
-         <input type="width" name="width" id="width" value="{{ width }}"/><br>
-          <input type="submit" value="Calculate Perimeter"/><br>
-
-          <label for="perimeter">Perimeter</label>
-         <input type="perimeter" name="perimeter" id="perimeter" value="{{ perimeter }}"/><br>
-	</form>
-
-            </body>
+            width: 500px;
+            margin: 0 auto;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background-color: #FFA2A6;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        input[type="submit"]:hover {
+            background-color: #FFA2CD;
+        }
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .perimeter {
+            margin-bottom: 20px;
+            color: purple;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color: black;
+        }
+        body { background-color: #FFD4A2; }
+    </style>
+</head>
+<body>
+    <h1>PERIMETER OF RECTANGLE</h1>
+    <form method="POST" action="/perimeter/">
+        {% csrf_token %}
         
-    
+        <label for="length">Enter Length</label>
+        <input type="number" name="length" id="length" value="{{ length }}" step="any" required>
+        
+        <label for="width">Enter Width</label>
+        <input type="number" name="width" id="width" value="{{ width }}" step="any" required>
+        
+        <input type="submit" value="Calculate Perimeter">
+        
+        <label for="perimeter">Perimeter</label>
+        <input type="text" name="perimeter" id="perimeter" value="{{ perimeter }}" readonly>
+    </form>
+</body>
 </html>
+
 ```
 
 
