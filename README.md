@@ -138,7 +138,7 @@ def perimeter(request):
 
     return render(request,"serverapp/perimeter.html",context)
 ```
-    ![212465273-51dcddbd-fcd5-4a5d-9c83-2835d5d325e9](https://user-images.githubusercontent.com/118708467/215157009-a89106a2-59b5-4148-99b2-49fadb7b2913.png)
+
 
 ## OUTPUT:
 ![WhatsApp Image 2023-01-27 at 11 09 24 PM (1)](https://user-images.githubusercontent.com/118708467/215157121-a45d50da-8468-4c9b-99a7-4a5f9c3aef8b.jpeg)
